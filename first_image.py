@@ -22,7 +22,7 @@ class ProcessImage():
 
 def main():
     imagem = ProcessImage()
-    imagem.load_image("img/arara.jpg")
+    imagem.load_image()
     imagem.show_image()
     imagem.show_channels()
 
