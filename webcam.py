@@ -11,7 +11,7 @@ class ProcessImage:
 
     def show_image(self):
         c.imshow("Imagem transposta", self.bgr)
-        c.waitKey(1)
+        
         
 
 def main():
@@ -21,7 +21,11 @@ def main():
         val, image = webcam.read()
         imagem.run_image(image)
         imagem.show_image()
+        if c.waitKey(1) == 13:
+            break
 
+    webcam.release()
+    c.destroyAllWindows()
     
 if __name__ == "__main__":
     main()   
